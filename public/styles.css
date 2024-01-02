@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+.App{
+    transform-origin: top left;
+    transform: scale(1);
+    width: 1300px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+
 .WelcomeToPetFancy{
     transform-origin: top left;
     transform: scale(1);
@@ -14,6 +24,7 @@
     right: 50%;
     transform: translate(-50%);
     margin-top: 70px;
+    margin-bottom: 80px;
 }
 
 .WelcomeToPetFancy h1 {
@@ -45,4 +56,60 @@
     background-color: white;
     padding: 5px;
     font-size: 10px;
+    cursor: pointer;
+}
+
+.circlePetImages{
+    display: flex;
+    padding: 20px;
+    transform-origin: top left;
+    transform: scale(1);
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.circlePetImages img{
+    margin-left: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.circlePetImages img:hover{
+   transform: scale(1.1);
+}
+
+#AllCollectionP{
+    color: grey;
+    font-family: Quicksand, sans-serif;
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding-bottom: 20px;
+}
+
+#AllCollectionP:hover{
+    color: rgb(176, 174, 174);
+    text-decoration: underline;
+}
+
+figcaption {
+ margin-left: 40%;
+ margin-top: 10px;
+}
+
+figcaption:hover{
+    text-decoration: underline;
+}
+
+
+
+figcaption a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: Quicksand, sans-serif;
+    font-weight: 600;
 }

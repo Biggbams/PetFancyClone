@@ -4,7 +4,7 @@ import CirclePetImages from './CirclePetImages';
 
 function App(){
       return(
-        <div>  
+        <div className='App'>  
           <WelcomeToPetFancy />
           <CirclePetImages />
         </div>
