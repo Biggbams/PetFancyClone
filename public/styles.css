@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.WelcomeToPetFancy{
+    transform-origin: top left;
+    transform: scale(1);
+    width: 800px;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    margin-top: 70px;
+}
+
+.WelcomeToPetFancy h1 {
+   float: right;
+   margin-right: 55px;
+   font-size: 35px;
+   font-weight: 700;
+   font-family: Quicksand, sans-serif;
+}
+
+.WelcomeToPetFancy p{
+    float: right;
+    margin-top:-190px;
+    max-width: 410px;
+    font-family: Quicksand, sans-serif;
+    color: rgb(97, 97, 97);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.viewNow{
+    float: right;
+    margin-right: 343px;
+    margin-top: -22px;
+    font-family: Quicksand, sans-serif;
+    color: rgb(97, 97, 97);
+    border-top: 1.3px solid black;
+    border-bottom: 1.3px solid black;
+    background-color: white;
+    padding: 5px;
+    font-size: 10px;
+}
