@@ -27,7 +27,7 @@ function ImgGroup(){
                     <a href="">DOBERMAN</a>
                 </figcaption>
             </figure>
-            <p id="AllCollectionP">All Collection</p>
+          
         </div>
         
     );

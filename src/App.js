@@ -1,4 +1,5 @@
 import Navandhero from "./navandhero";
+import App2 from './components/App'
 const App=()=>{
     return(
        <div style={
@@ -7,6 +8,7 @@ const App=()=>{
         }
        }>
         <Navandhero/>
+        <App2/>
        </div> 
     )
 }
