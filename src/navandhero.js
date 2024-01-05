@@ -171,4 +171,30 @@ export default function Navandhero() {
         </div>
 
     );
+
+   
+    
+}
+
+export function Hero({hei,hero_image,hero_title,paragraph,btton}){
+        
+    return(
+        <div
+        className='hero-container'
+        style={{
+            height:hei,
+            color:btton
+        }}
+    >
+        <img className="hero-image" src={hero_image} alt="Hero Image" />
+        <div className="hero-text">
+            <h1>{hero_title}</h1>
+            <p >{paragraph}</p>
+            <a>{btton}</a>
+        </div>
+    </div>
+
+
+
+    );
 }
