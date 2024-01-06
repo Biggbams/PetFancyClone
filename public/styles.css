@@ -119,6 +119,13 @@ figcaption:hover {
     text-decoration: underline;
 }
 
+footer{
+   background-color:#ebebeb;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   padding-left: 40px;
+   padding-right: 40px;
+}
 
 
 figcaption a {
@@ -127,6 +134,80 @@ figcaption a {
     font-size: 15px;
     font-family: Quicksand, sans-serif;
     font-weight: 600;
+}
+
+.PetFancyBottomImg{
+    width: 90px;
+    height: 24px;
+   display: flex;
+}
+
+table{
+    font-family: Quicksand, sans-serif;
+    font-size: 1.5em;
+}
+
+table a{
+    text-decoration: none;
+}
+
+th{
+    color: rgb(73, 72, 72);
+}
+
+.First{
+    padding-right: 130px;
+}
+
+.second{
+    padding-right: 100px;
+    padding-left: 70px;
+    padding-bottom: 5px;
+    text-align: top;
+}
+
+.bottomb{
+    height: 24px;
+    width: 32px;
+    padding-right: 5px;
+    position: relative;
+    left: 950px;
+}
+
+.DMAC{
+    position: relative;
+    left: 850px;
+    color: #8b7f74;;
+}
+
+.third{
+    text-align: left;
+}
+
+.copyright{
+    position: relative;
+    left: 70px;
+    margin-top: 30px;
+    font-family: Quicksand, sans-serif;
+    color: #8b7f74;
+}
+
+hr{
+    width: 1000px;
+    position: relative;
+    left: 70px;
+}
+
+table td{
+    color: #8b7f74;
+}
+
+table td a p{
+    color: #8b7f74;
+}
+
+table td a p:hover{
+    text-decoration: underline;
 }
 
 @media Screen and (max-width: 800px) {
