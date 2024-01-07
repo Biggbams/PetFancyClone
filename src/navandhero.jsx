@@ -1,9 +1,10 @@
 import './navandhero.scss'
 import ReactDOM from 'react-dom'
+import Button from './components/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
-import { faHamburger, faX } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faX,faGlobe,faCopyright } from '@fortawesome/free-solid-svg-icons'
 
 import { useState, useRef } from 'react'
 export default function Navandhero() {
@@ -137,7 +138,7 @@ export default function Navandhero() {
                                     display.current.style.display = 'block'
 
                                 }}
-                            ><FontAwesomeIcon icon={faHamburger} /></li>
+                            ><FontAwesomeIcon icon={faBars} /></li>
                             <li
                                 onClick={() => {
                                     setTop('0');
@@ -198,3 +199,129 @@ export function Hero({hei,hero_image,hero_title,paragraph,btton}){
 
     );
 }
+
+export function NewArrival({newData}){
+    
+const newArrivalData= newData.map(data=>  
+ <div className="gallarey">
+    <img src={data.image} alt={data.title} srcset="" />
+<p>{data.title}</p>
+    <p>{data.price}   &nbsp; &nbsp; <span>{data.original_price}</span></p>
+</div>
+    
+    );
+
+    return(
+        <div 
+        className='new-arrival-container'
+        >
+            <div className="new-arrival-first-div">
+                <p>New Arrival</p>
+                <Button
+               
+                />
+            </div>
+
+            <div className="new-arrival-gallrey">
+
+                    {newArrivalData}
+
+            </div>
+            
+        </div>
+    );
+}
+
+
+export const GridHero=()=>{
+
+    return(
+        <div
+        className='grid-hero-container'
+        >
+            <div className="grid-hero-img">
+                <img src="https://img.thesitebase.net/files/10394844/2023/02/04/0x1080@1675550974ede531d09d.png" alt="" />
+            </div>
+            <div className="subscribtion">
+                <form>
+                    <h1>Subscribe</h1>
+                    <p>Sign up to get the latest on sales, new releases and more …</p>
+                    <div>
+                    <input placeholder='your email' type="text" name="" id="" />
+                    <button type="button">SIGN UP</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    )
+}
+
+
+export const Footer=()=>{
+
+    return(
+        <div className="footer">
+
+        <div className="footer-section">
+
+        <div className="footer-section-contact">
+            <img src="https://img.thesitebase.net/files/10394844/2023/02/04/180x180_x2@16755159689bea4c82f1.png" alt="" srcset="" />
+            <ul>
+                <li>+1 (844) 909-4899</li>
+                <li>support@petfancy.shop</li>
+            </ul>
+        </div>
+
+        <div className="footer-section-customer-support">
+            <p>Customer Support</p>
+            <ul>
+                <li>Contact Us</li>
+                <li>FAQs</li>
+                <li>Order Tracking</li>
+            </ul>
+        </div>
+
+
+        <div className="footer-section-policies">
+            <p>Policies</p>
+            <ul>
+                <li>Privacy Policy</li>
+                <li>Term of Service</li>
+                <li>Return Policy</li>
+                <li>Shipping Policy</li>
+                <li>Refund Policy</li>
+            </ul>
+        </div>
+
+        </div>
+
+
+        <div className="copyright">
+            
+        <span><FontAwesomeIcon icon={faCopyright}></FontAwesomeIcon> {new Date().getFullYear()}</span>
+
+
+        <div
+        className='copyright-right-container'
+        >
+            <span>DCMA REPORT</span>
+
+        <div>
+
+            <p>
+            <FontAwesomeIcon icon={faGlobe} /> USA (USD) | EN</p>
+            <div className="card-grid">
+                <img src="https://img.thesitebase.net/files/10088580/2020/06/15/1592212702159c1d36ae.png" alt="" />
+                <img src="https://img.thesitebase.net/files/10088580/2020/06/15/1592212715afd34ddc0e.png" alt="" />
+                <img src="https://img.thesitebase.net/files/10088580/2020/06/15/1592212709e5152d4744.png" alt="" />
+                <img src="https://img.thesitebase.net/files/10088580/2020/06/15/15922126940058f3e369.png" alt="" />
+            </div>
+        </div>
+
+        </div>
+        </div>
+        </div>
+    );
+}
+// {image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAisAAAIrCAAAAAALxYb0AAAAAmJLR0QA/4ePzL8AAAVwSURBVHja7dzbVqMwGIBR3/8l/4iUGXGQgzzAXLRqW0JN62X29wisvciBkKdVKuvJIxArYkWsiBWxIlYkVsSKWBErYkWsSKyIFbEiVsSKWBErEitiRayIFbEiViRWxIpYEStiRayIFYkVsSJWxIpYESsSK2JFrIgVsSJWxIrEilgRK2JFrIgViRWxIlbEilgRK2JFYkWsiBWxIlbEisSKWBErYkWsiBWJFbEiVsSKWBErYkViRayIFbEiVsSKxIpYEStiRayIFbEisSJWxIpYEStiRWJFrIgVsSJWxIpYkVgRK2JFrIgVsSKxIlbEilgRK2JFrEisiBWxIlbEiliRWBErYkWsiBWxIlY8ArEiVsSKWBErYkViRayIFbEiVsSKxIpYEStiRayIFbEisSJWxIpYEStiRWJFrIgVsSJWxIpYkVgRK2JFrIgVsSKxIlbEilgRK2JFrEisiBWxIlbEiliRWBErYkWsiBWxIlYkVsSKWBErYkWsSKyIFbEiVsSKWJFYEStiRayIFbEiViRWxIpYEStiRaxIrIgVsSJWxIpYESsSK2JFrIgVsSJWJFbEilgRK2JFrIgViRWxIlbEilgRKxIrYkWsiBWxIlbEiu5qbjpWVETlOVpWVEalWVgRKqwUNh0u62ZUWMn20cRVzQcqrOTqYlOHCiuZ3iLTGyqsbBpTzkqaUGHlx8nK1ZSldiqs3JqsXExZqqfCys3JyrF/qNRuZZnOGtK+lTR/UlmmabIOqq65jdIOHycqcxMRcZhZqYtKKqbSHanMJyoRz/b4q+rPvW+VbyoRf1mpqaaUSrulEi+s1FT6BZVoWGFl00uOCiusnFbIh34Yx6E/pD0qrLASEZH6r1MIy2u7ZKmwwspxfXy5tM5RYYWViH4tocIKK6VUWGGlK6TCSvVWUnausr4EK6zcHoFOVNaeFVZuv1Y+qawLK6xcfyPMU1nXlhVW9g/sn1PJDEKsVG7lfYfKOrDCymXTDpX1nRVWLhu/qTTnVFhhZXcMuqKSOeHPSuVW+h0q5ras7P0ydk3FmpmV/F7cloq9OFayg9CWyvrKCiubY9hZKktihZVrAEuOynoIVlgpovIarLDyOBVWqraSp7Ls3MnCSsVWvqjM7dk/H/3ejyGs1Gvlm0oTkbp+mMahv3HnBivVWrmgUhIrtVq5mwortVq5nworlVp5gAordfUJ44jkPiqs1FX3CyruAKurKT1OJc2sVNXYPEqlGVdWatMyfG3sj0N5Y7UPrO471nOfC8UKKqygwgoqrKDCCiqsoKKqraDCSmmosFJaiworYkWsiBWxIlYkVsSKWBErYkWsSKyIFbEiVsSKWBErEitiRayIFbEiViRWxIpYEStiRaxIrIgVsSJWxIpYESsSK2JFrIgVsSJWJFbEilgRK2JFrIgViRWxIlbEilgRKxIrYkWsiBWxIlbEisSKWBErYkWsiBWJFbEiVsSKWBErYkViRayIFbEiVsSKxIpYEStiRayIFbEisSJWxIpYEStiRWJFrIgVsSJWxIrEilgRK2JFrIgVsSKxIlbEilgRK2JFYkWsiBWxIlbEiliRWBErYkWsiBWxIrEiVsSKWBErYkWsSKyIFbEiVsSKWJFYEStiRayIFbEiViRWxIpYEStiRaxIrIgVsSJWxIpYkVgRK2JFrIgVsSJWJFbEilgRK2JFrEisiBWxIlbEilgRKxIrYkWsiBWxIlYkVsSKWBErYkWsiBWJFbEiVsSKWBErEitiRayIFbEiVsSKxIpYEStiRayIFYkVsSJWxIpYEStiRWJFrIgVsSJWxIrEilgRK2JFrIgViRWxIlbEilgRK2JFYkWsiBWxIlbEisSK7us/OyFk/fYyoKEAAAAASUVORK5CYII=",title="loading...",price="$0.00",original_price="$0.00"}
