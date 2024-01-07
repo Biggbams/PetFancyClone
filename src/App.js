@@ -1,6 +1,7 @@
 import Navandhero from "./navandhero";
-import App2 from './components/App'
-import { Hero, NewArrival,GridHero, Footer } from './navandhero'
+import App2 from './components/App';
+import { Hero, NewArrival,GridHero, Footer } from './navandhero';
+
 const App = () => {
     return (
         <div style={
@@ -22,7 +23,9 @@ const App = () => {
             />
             <GridHero/>
             <Footer/>
-        </div>
+        
+
+       </div>
     )
 }
 export default App;
