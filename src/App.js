@@ -1,6 +1,7 @@
-import Navandhero from "./navandhero";
+import Navandhero from "./components/navandhero";
 import App2 from './components/App';
-import { Hero, NewArrival,GridHero, Footer } from './navandhero';
+import { Hero, NewArrival,GridHero, Footer } from './components/navandhero';
+
 
 const App = () => {
     return (
@@ -10,6 +11,13 @@ const App = () => {
             }
         }>
             <Navandhero />
+            <Hero
+                // hero_title="Accesories for Pet"
+                hei="100vh"
+                paragraph="Make Your Pet's Day With Our Range Of Pet Accessories At Petfancy Today. Our Pet Bandanas Are Handmade To The Highest Quality For Your Pet!"
+                btton="SHOP NOW"
+                hero_image="https://img.thesitebase.net/files/10394844/2023/02/04/878x2048_center@167551005832772d7575.jpeg"
+            ></Hero>
             <App2 />
             <Hero
                 hero_title="Everything For Pet"

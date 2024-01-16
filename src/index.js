@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Shop from './components/shop';
+import ErrorPage from './components/Error404';
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <App/>,
+      errorElement:<ErrorPage/>
+    
+},
+{
+  path: "/shop",
+  element: <Shop/>,
+  errorElement:<ErrorPage/>
+
+},
+  ]);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
 

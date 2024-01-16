@@ -1,6 +1,5 @@
 @import 'color';
-$list_color:#7f7f7f;
-$layout-breakpoint-small:750px;
+
 
 
 .first-container{
@@ -676,7 +675,7 @@ background: white;
 
     @media (max-width: $layout-breakpoint-small) {
             
-        justify-content: center;
+        justify-content: center !important;
            
          }
 
