@@ -1,8 +1,16 @@
 import React from "react";
 
-function button(){
+function button({margin='0'}){
     return(
-        <button className="viewNow">
+        <button 
+        className="viewNow"
+        style={
+
+            {
+                marginTop:margin
+            }
+        }
+        >
             VIEW NOW
         </button>
     );

@@ -15,7 +15,7 @@ function WelcomeToPetFancy(){
             <p>Petfancy the ultimate pet shop experience. It really is a paradise for pets and pet owners. We have all the pet supplies, pet food, toys and accessories you and your pet need at great value prices. All our store colleagues are fully trained in pet care and dedicated to the welfare of your animals, with most of them being experienced pet owners. 
                 
             <br /><br />So when you are a new owner or an expert, our store colleagues are on hand to help you make the right choices. </p>
-            <Button />
+            <Button margin="1.5em" />
             </div>
         </div>
     )
