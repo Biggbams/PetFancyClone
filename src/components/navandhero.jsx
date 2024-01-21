@@ -151,7 +151,7 @@ let tl = gsap.timeline({
                     <div ref={display} className='list-section'>
                         <ul>
                             <li className='active'>Home</li>
-                            <li><Link to='/shop'> Shop Now</Link></li>
+                            <li><Link  className='router-link' to='/shop'> Shop Now</Link></li>
                             <li>Order Tracking</li>
                             <li>FAQs</li>
                             <li>Contact Us</li>

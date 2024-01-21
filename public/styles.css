@@ -197,7 +197,10 @@ hr{
     position: relative;
     left: 70px;
 }
-
+.router-link{
+    color: #7f7f7f;
+    text-decoration: none;
+}
 table td{
     color: #8b7f74;
 }
