@@ -86,11 +86,10 @@ text-align: start;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .circlePetImages figure{
-   
+   text-align: center;
 }
-.circlePetImages img {
-    width: 250px;
-    height: 250px;
+.circlePetImages  img {
+    
     transition: transform 0.3s ease-in-out;
 }
 
@@ -129,11 +128,13 @@ footer{
 
 
 figcaption a {
+    display: block;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 15px;
     font-family: Quicksand, sans-serif;
     font-weight: 600;
+    text-align: center;
 }
 
 .PetFancyBottomImg{
@@ -197,7 +198,10 @@ hr{
     position: relative;
     left: 70px;
 }
-
+.router-link{
+    color: #7f7f7f;
+    text-decoration: none;
+}
 table td{
     color: #8b7f74;
 }
