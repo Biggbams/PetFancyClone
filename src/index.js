@@ -2,6 +2,7 @@ import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import Shop from './components/shop';
+import Order from './components/order'
 import ErrorPage from './components/Error404';
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 
@@ -18,6 +19,13 @@ const router = createBrowserRouter([
   errorElement:<ErrorPage/>
 
 },
+
+{
+  path: "/order",
+  element: <Order/>,
+  errorElement:<ErrorPage/>
+
+}
   ]);
 
 

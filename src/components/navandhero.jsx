@@ -152,7 +152,7 @@ requestAnimationFrame(raf)
                         <ul>
                             <li className='active'>Home</li>
                             <li><Link  className='router-link' to='/shop'> Shop Now</Link></li>
-                            <li>Order Tracking</li>
+                            <li><Link  className='router-link' to='/order'> Order Tracking</Link></li>
                             <li>FAQs</li>
                             <li>Contact Us</li>
                             <li className='close'

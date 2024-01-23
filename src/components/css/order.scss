@@ -1,0 +1,146 @@
+
+.order-tracking{
+    padding: 2em 4em 3em 4em;
+ .firstparagraph  {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+
+       h1{
+        font-size: 3em;
+        font-weight: bold;
+        margin-bottom: 1em;
+       }
+    }
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    padding: .5em 2em 1em 2em;
+}
+
+.innerform-container{
+    max-width: 75em;
+    padding: 2.5em;
+   
+}
+
+.innerform-container p:first-child{
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 1em;
+ 
+}
+
+.form{
+border-top: 1em;
+background-color: rgb(248, 248, 248);
+padding: 2em;
+}
+
+.form form .trackbynumber input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    margin-bottom: .5em;
+    border:  1px solid rgba(0,0,0,0.1);
+    padding: .5em 1.2em .5em 1.2em ;
+    min-height: 40px;
+    font-size: 1.5em;
+}
+
+
+
+
+.form form .trackbyname input{
+    
+    border: 0;
+    outline: 0;
+    margin-bottom: .5em;
+    border:  1px solid rgba(0,0,0,0.1);
+    padding: .5em 1.2em .5em 1.2em ;
+    min-height: 40px;
+    font-size: 1.5em;
+}
+
+.form form .trackbyname div{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: .5em;
+}
+.form form .trackbyname > input:first-child{
+   width: 100%;
+}
+
+ .trackbyname  div input:first-child{
+    width:50%;
+    
+}
+
+ .trackbyname  div input:nth-child(2){
+    width: 50%;
+    
+}
+
+.form form button{
+    width: 40%;
+    background-color: #8b7f74;
+    color: white;
+    appearance: none;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  padding: 11px 22px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  border-radius: 0px;
+  box-shadow: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  border: 1px solid transparent;
+  overflow: hidden;
+
+  
+}
+
+.form form button:hover{
+    cursor: pointer;
+    background-color: #6c5642;
+  }
+  .toggle-form{
+    font-size: 1.5em;
+    padding: .5em;
+    margin-top: .5em;
+    transition: all 500ms;
+  }
+
+
+  .toggle-form:hover{
+    color: #6c5642;
+    cursor: pointer;
+  }
+  
+
+  .myc{
+    display: flex;
+    align-items: start;
+    font-size: 1.5em;
+    gap: 1em;
+    padding: .5em .5em .5em 1em;
+  }
+
+  .myc >span  .icon{
+color: #ffffff;
+background-color: rgb(0, 0, 0);
+border-radius: 50px;
+font-size: 1.5em;
+border: 1px solid black;
+  }
