@@ -73,9 +73,20 @@ const trackoption=
     setShowForm('a')
    }
 }}>{(showForm=='a')?'I forgot my order name':'Track by ordeer number'}</p>
-<p className="myc"> <span><FontAwesomeIcon   className="icon" icon={faCircleExclamation}/></span>  If you just received a shipment notification, please allow 3 to 5 working days for the tracking information to update.</p>
+<p className="myc"> <span><FontAwesomeIcon   className="icon" icon={faCircleExclamation}/></span>  <p>If you just received a shipment notification, please allow 3 to 5 working days for the tracking information to update.</p> </p>
+
+<div className="order-faqs">
+
+    <p>faqs</p>
 </div>
+
 </div>
+
+
+
+
+</div>
+
 </div>
 
      );
