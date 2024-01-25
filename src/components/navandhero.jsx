@@ -150,10 +150,10 @@ requestAnimationFrame(raf)
                     {/* list  */}
                     <div ref={display} className='list-section'>
                         <ul>
-                            <li className='active'>Home</li>
+                            <li><Link  className='active router-link' to='/'>Home</Link></li>
                             <li><Link  className='router-link' to='/shop'> Shop Now</Link></li>
-                            <li><Link  className='router-link' to='/order'> Order Tracking</Link></li>
-                            <li>FAQs</li>
+                            <li>Order Tracking</li>
+                            <li><Link  className='router-link' to='/Faq'> FAQ</Link></li>
                             <li>Contact Us</li>
                             <li className='close'
                                 onClick={() => {

@@ -5,6 +5,7 @@ import Shop from './components/shop';
 import Order from './components/order'
 import ErrorPage from './components/Error404';
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import Faq from './components/Faq';
 
 const router = createBrowserRouter([
     {
@@ -21,11 +22,11 @@ const router = createBrowserRouter([
 },
 
 {
-  path: "/order",
-  element: <Order/>,
+  path: "/Faq",
+  element: <Faq />,
   errorElement:<ErrorPage/>
 
-}
+},
   ]);
 
 

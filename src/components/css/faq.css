@@ -1,0 +1,64 @@
+h1{
+    text-align: center;
+    margin-top: 2em;
+}
+
+h2{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.faq-paragraph{
+    max-width: 60em;
+    overflow: hidden !important;;
+}
+
+.Main{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.Main2{
+    padding: 0 2em 0 2em;
+}   
+
+.Main3{
+    border-bottom: 0.1em solid rgb(188, 187, 187);
+}
+
+.Main4{
+    margin-top: 10em;
+    margin-bottom: 20em;
+    border: 0.1em solid rgb(188, 187, 187);
+    display: grid;
+    place-items: center;
+    padding:2em;
+}
+
+button{
+    margin-top: 1em;
+    color: white !important;
+    background-color: #8b7f74;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.icon{
+    border: 0.1em solid black;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+ 
