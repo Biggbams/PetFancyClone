@@ -1,8 +1,9 @@
 import Navandhero, { Footer } from "./navandhero";
 import "./css/faq.css";
-import { useState } from "react";
+import { useState,useRef } from "react";
 import Faqs from "./Faqs";
-
+//so now dapo,to make the indiviaual close bottom work you have to use useRef to access the dom
+//if you want to use use fer you haveto import it from react
 function Faq() {
   return (
     <div>
@@ -18,30 +19,44 @@ function Faq() {
 export default Faq;
 
 function Faqchild() {
-  const [toggleHeight, setToggleHeight] = useState("5em");
-  const [togglepad, setTogglePad] = useState("1em");
-  const [rotateMe, setRotateMe] = useState("45deg");
+//create a dom reference heere
+const closeBtn=useRef([]);
+const spanRotate=useRef([])
+//the reason we are putting array as an argument in the useref is that we want to mkae the useRef behave like an array so we can allocate 1 useref to each element in the list
+//if you dont do it that way the   cloose btn will open all description panel at once
 
-  const myfaqs= Faqs.map((e)=>
+
+
+  // const [toggleHeight, setToggleHeight] = useState("5em");
+  // const [togglepad, setTogglePad] = useState("1em");
+
+  const myfaqs= Faqs.map((e,index)=>
   <div className="Main3" key={e.id}>
   <h2>
-    {e.Heading}
+    <span>{e.Heading}</span>
     <span
-      onClick={togglef}
-      className="icon"
-      style={{
-        rotate: rotateMe,
+    ref={(node)=>{
+      spanRotate.current[index]=node
+    }}
+      onClick={()=>{
+        togglef(index)
       }}
+      className="icon"
+      
     >
       +
     </span>
   </h2>
   <p
     className="faq-paragraph"
-    style={{
-      height: toggleHeight,
-      paddingBottom: togglepad,
+    ref={(node)=>{
+      closeBtn.current[index]=node
     }}
+    // style={{
+    //   height: toggleHeight,
+    //   paddingBottom: togglepad,
+      
+    // }}
   >
     {e.Description}
   </p>
@@ -51,15 +66,21 @@ function Faqchild() {
   
   
 
-  function togglef() {
-    if (toggleHeight == "5em") {
-      setToggleHeight("0em");
-      setTogglePad("0em");
-      setRotateMe("0deg");
+  function togglef(index) {
+    if ( closeBtn.current[index].style.maxHeight=='5em') {
+      closeBtn.current[index].style.maxHeight='0em'
+      closeBtn.current[index].style.padding='0em'
+      closeBtn.current[index].style.border='0em'
+      // setToggleHeight("0em");
+      // setTogglePad("0em");
+      spanRotate.current[index].style.rotate='0deg'
     } else {
-      setToggleHeight("5em");
-      setTogglePad("1em");
-      setRotateMe("45deg");
+      closeBtn.current[index].style.maxHeight='5em'
+      closeBtn.current[index].style.padding='1em'
+      closeBtn.current[index].style.borderBottom='.1em solid black'
+      // setToggleHeight("5em");
+      // setTogglePad("1em");
+      spanRotate.current[index].style.rotate='45deg'
     }
   }
   return (

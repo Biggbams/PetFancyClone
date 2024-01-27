@@ -1,0 +1,60 @@
+@import 'color';
+
+.order-faqs{
+    padding: 2em .5em 2em 2em;
+    color:  rgb(76, 69, 69)  !important;
+
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 1em .3em 1em .3em;
+
+  }
+  }
+
+  .order-faqs > p:first-child{
+   font-size: 2em;
+   font-weight: bold;
+   color:  rgb(76, 69, 69)  !important;
+   
+  }
+
+
+  .order-faqs > button{
+    font-size: 1.5em;
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+     background: white;
+     color:  rgb(76, 69, 69)  !important;
+     font-weight: bold;
+
+     @media (max-width: $layout-breakpoint-small) {
+      font-weight: normal;
+  }
+    p{
+     font-family: $main_font;
+      text-align: left;
+      font-size: .9em;
+    }
+   }
+
+   .order-faqs > button:hover{
+color: rgb(78, 74, 68);
+background-color: rgb(231, 231, 231);
+   }
+
+   .faq-description{
+    font-size: 1.5em;
+    display: block;
+  max-height: 0em;
+    overflow: hidden;
+    line-height: 2em;
+    transition: max-height 100ms;
+   }
+
+   .faq-description > p{
+text-justify: distribute-all-lines;
+   }
+   

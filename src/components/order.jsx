@@ -1,8 +1,10 @@
 import Navandhero,{Footer} from "./navandhero";
 import './css/order.scss'
-import { useState,useEffect } from "react";
+import './css/accordion.scss'
+import { useState,useEffect,useRef, Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { faCircleExclamation,faCaretDown,faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import Faqs_data from './Faqs'
 const Order = () => {
    
     return ( 
@@ -10,7 +12,6 @@ const Order = () => {
         <div className="order-container">
             <Navandhero/>
                 <OrderTracking/> 
-
             <Footer/>
 
         </div>
@@ -75,10 +76,7 @@ const trackoption=
 }}>{(showForm=='a')?'I forgot my order name':'Track by ordeer number'}</p>
 <p className="myc"> <span><FontAwesomeIcon   className="icon" icon={faCircleExclamation}/></span>  <p>If you just received a shipment notification, please allow 3 to 5 working days for the tracking information to update.</p> </p>
 
-<div className="order-faqs">
-
-    <p>faqs</p>
-</div>
+<Faqs/>
 
 </div>
 
@@ -92,7 +90,63 @@ const trackoption=
      );
 }
  
+const Faqs = () => {
+    const [icon,setIcon]=useState(faCaretDown)
+    const accordion_paragraph=useRef([]);
 
+  const accordion=  Faqs_data.map((data,index)=>
+    
+  <Fragment>
+
+    <button
+
+key={data.id}
+    onClick={()=>{
+        openAccordion(index)
+    }}
+    >
+        <p>{data.Heading}</p>
+        <FontAwesomeIcon
+        icon={icon}
+        />
+        </button>
+    <div className="faq-description" ref={(node)=>{
+        accordion_paragraph.current[index]=node
+    }}>
+        <p>
+        {data.Description}
+        </p>
+    </div>
+</Fragment>
+    )
+
+    const openAccordion  = (index) => {
+      if( accordion_paragraph.current[index].style.maxHeight!='30em')  { 
+       accordion_paragraph.current[index].style.maxHeight='30em'
+    accordion_paragraph.current[index].style.padding='1em'
+    accordion_paragraph.current[index].style.borderBottom='1px solid grey'
+    setIcon(faCaretUp)
+    }else{
+        accordion_paragraph.current[index].style.maxHeight='0em'
+        accordion_paragraph.current[index].style.padding='0em'
+        accordion_paragraph.current[index].style.borderBottom='0' 
+       setIcon(faCaretDown)
+    }
+}
+   
+    return ( 
+
+        <div  className="order-faqs">
+
+        <p>faqs</p>
+        {accordion}
+      </div>
+     );
+}
+ 
+module.export={Faqs};
 export default Order;
+
+
 
 

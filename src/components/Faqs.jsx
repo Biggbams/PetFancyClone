@@ -33,4 +33,11 @@ const Faqs = [
   },
 ];
 
+
+export const orderFaqs =[
+  
+  {
+   
+  }
+]
 export default Faqs;

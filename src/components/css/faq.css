@@ -14,21 +14,42 @@ h2{
 
 .faq-paragraph{
     max-width: 60em;
-    overflow: hidden !important;;
+    max-height: 0em;
+    overflow: hidden !important;
+    border: none;
+    font-size: 1.5em;
+    line-height: 2em;
 }
 
 .Main{
    display: flex;
    justify-content: center;
    align-items: center;
+   padding: 2.5em;
 }
 
 .Main2{
     padding: 0 2em 0 2em;
 }   
 
-.Main3{
-    border-bottom: 0.1em solid rgb(188, 187, 187);
+.Main3 h2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5em;
+    padding: .5em;
+  
+}
+
+.Main3 h2:hover{
+
+background-color: #dddddd;
+color: rgb(73, 66, 66);
+}
+
+.Main3 h2 span:first-child{
+width: 80%;
+text-overflow: ellipsis;
 }
 
 .Main4{
@@ -50,15 +71,26 @@ button{
 }
 
 .icon{
-    border: 0.1em solid black;
-    display: inline-block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 100ms ease-in-out;
+   border: .1em solid black;
+   border-radius: 50%;
+   width: 2em;
+   height: 2em;
+   display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+
 }
- 
+@media Screen and (max-width: 400px) {
+.main{
+    padding: .5em;
+}
+.Main2{
+    padding: .5em;
+}
+.Main3 h2 span:first-child{
+    width: 80%;
+    text-overflow: ellipsis;
+    font-size: .8em;
+    }
+}

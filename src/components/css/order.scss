@@ -1,16 +1,29 @@
+@import 'color';
 
 .order-tracking{
     padding: 2em 4em 3em 4em;
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 1.5em .3em 1.5em .3em;
+
+  }
  .firstparagraph  {
        display: flex;
        justify-content: center;
        align-items: center;
-
+       color:  rgb(76, 69, 69)  !important;
 
        h1{
         font-size: 3em;
         font-weight: bold;
-        margin-bottom: 1em;
+        margin-bottom: .5em;
+        padding: 1em;
+
+        @media (max-width: $layout-breakpoint-small) {
+       font-size: 2em;
+       line-height: 1em;
+       font-weight: normal;
+  
+      }
        }
     }
 }
@@ -19,28 +32,45 @@
     display: flex;
     justify-content: center;
     padding: .5em 2em 1em 2em;
+    color:  rgb(76, 69, 69)  !important;
+    @media (max-width: $layout-breakpoint-small) {
+      padding: .5em .3em .5em .3em;
+
+  }
 }
 
 .innerform-container{
     max-width: 75em;
     padding: 2.5em;
+    @media (max-width: $layout-breakpoint-small) {
+      padding: .5em;
+
+  }
    
 }
 
-.innerform-container p:first-child{
+.innerform-container > p:first-child{
   font-size: 1.5em;
   font-weight: bold;
   padding-bottom: 1em;
- 
+  @media (max-width: $layout-breakpoint-small) {
+    padding: .5em;
+    font-weight: normal;
+
+}
 }
 
 .form{
 border-top: 1em;
 background-color: rgb(248, 248, 248);
 padding: 2em;
+@media (max-width: $layout-breakpoint-small) {
+  padding: .5em;
+
+}
 }
 
-.form form .trackbynumber input{
+.form  form   .trackbynumber > input{
     width: 100%;
     border: 0;
     outline: 0;
@@ -49,12 +79,17 @@ padding: 2em;
     padding: .5em 1.2em .5em 1.2em ;
     min-height: 40px;
     font-size: 1.5em;
+
+    @media (max-width: $layout-breakpoint-small) {
+      padding: .5em;
+
+  }
 }
 
 
 
 
-.form form .trackbyname input{
+.form form .trackbyname  input{
     
     border: 0;
     outline: 0;
@@ -65,17 +100,17 @@ padding: 2em;
     font-size: 1.5em;
 }
 
-.form form .trackbyname div{
+.form  form  .trackbyname  div{
 display: flex;
 justify-content: space-between;
 align-items: center;
 gap: .5em;
 }
-.form form .trackbyname > input:first-child{
+.form > form  .trackbyname  input:first-child{
    width: 100%;
 }
 
- .trackbyname  div input:first-child{
+ .trackbyname  div  input:first-child{
     width:50%;
     
 }
@@ -85,10 +120,10 @@ gap: .5em;
     
 }
 
-.form form button{
+.form > form button{
     width: 40%;
     background-color: #8b7f74;
-    color: white;
+    color: rgb(237, 237, 237);
     appearance: none;
   font-size: 14px;
   line-height: normal;
@@ -107,13 +142,16 @@ gap: .5em;
   height: inherit;
   border: 1px solid transparent;
   overflow: hidden;
+  @media (max-width: $layout-breakpoint-small) {
+   width: 100%;
 
+}
   
 }
 
-.form form button:hover{
+.form   form  button:hover{
     cursor: pointer;
-    background-color: #6c5642;
+    background-color: #715c47;
   }
   .toggle-form{
     font-size: 1.5em;
@@ -145,7 +183,4 @@ font-size: 1em;
 border: 1px solid black;
   }
 
-  .order-faqs{
-    padding: 2em .5em 2em 2em;
-    margin-top: 3em;
-  }
+  
