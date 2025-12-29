@@ -4,6 +4,8 @@ import App from './App';
 import Shop from './components/shop';
 import Order from './components/order'
 import ErrorPage from './components/Error404';
+import Contact from './components/contact';
+import BackendGrid from './components/backend/backendGrid'
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import Faq from './components/Faq';
 
@@ -32,6 +34,18 @@ const router = createBrowserRouter([
 {
   path: "/Faq",
   element: <Faq />,
+  errorElement:<ErrorPage/>
+
+},
+{
+  path: "/contact",
+  element: <Contact />,
+  errorElement:<ErrorPage/>
+
+},
+{
+  path: "/petsalesHouse",
+  element: <BackendGrid />,
   errorElement:<ErrorPage/>
 
 },

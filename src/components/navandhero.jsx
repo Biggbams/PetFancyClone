@@ -154,7 +154,7 @@ requestAnimationFrame(raf)
                             <li><Link  className='router-link' to='/shop'> Shop Now</Link></li>
                             <li><Link  className='router-link' to='/order'> Order Tracking</Link></li>
                             <li><Link  className='router-link' to='/Faq'> FAQ</Link></li>
-                            <li>Contact Us</li>
+                            <li><Link  className='router-link' to='/contact'> Contact Us</Link></li>
                             <li className='close'
                                 onClick={() => {
                                     display.current.style.display = 'none'

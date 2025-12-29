@@ -1,0 +1,164 @@
+@import 'color';
+*{
+    font-family: $main_font;
+}
+
+.contact-form{
+padding: 0em 0em 1em 0em;
+display: flex;
+align-items: center;
+justify-content: center;
+
+@media (max-width: $layout-breakpoint-small) {
+    
+}
+}
+.c-form{
+    padding: 0.5em;
+    width: 60%;
+    @media (max-width: $layout-breakpoint-small) {
+      width: 98%;
+    }  
+}
+.header{
+padding: .5em;
+@media (max-width: $layout-breakpoint-small) {
+    padding: .21em;  
+}   
+ 
+}
+.header > p:first-child{
+font-size: 3.5em;
+font-weight: bold;
+text-align: center;
+padding: .9em;
+@media (max-width: $layout-breakpoint-small) {
+   font-size: 2em; 
+   padding: .2em; 
+}  
+}
+
+.header > p:first-child + p{
+     font-size: 1.5em;  
+     line-height: 1.5em; 
+     padding: 1.5em;
+     font-weight: bold;
+     @media (max-width: $layout-breakpoint-small) {
+      font-size: 1.3em;
+     }  
+}
+.one-textfield{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: .5em;
+gap: .5em;
+     .textfield{
+        width: 100%;
+        label{
+            font-weight: bold;
+            font-size: 1.5em;
+            line-height: 2.0em;
+            @media (max-width: $layout-breakpoint-small) {
+      font-size: 1.3em;
+            }  
+        }
+        input{
+            width: 100%;
+            border: 0;
+            outline: 0;
+            margin-bottom: .5em;
+            border:  1px solid rgba(0,0,0,0.1);
+            padding: .5em 1.2em .5em 1.2em ;
+           
+            font-size: 1.5em;
+        }
+        select{
+            display: block;
+            border: none;
+            outline: none;
+            width: 100%;
+            background: #ffffff;
+            font-size: 1.5em;
+            font-size: medium;
+            appearance: none;
+        padding: .7em;
+        background: #ffffff;
+        //border: .125em solid blue;
+        outline: .125em solid rgb(8, 180, 232);
+            @media (max-width: $layout-breakpoint-small) {
+                font-size: 1.2em;
+        
+            }
+        }
+        textarea{
+            display: block;
+            width: 100%;
+            padding: 1em;
+        }
+    }
+}
+
+.two-textfield{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+    gap: .5em;
+    @media (max-width: $layout-breakpoint-small) {
+      flex-wrap: wrap;
+    }  
+         .textfield{
+            width: 50%;
+
+            @media (max-width: $layout-breakpoint-small) {
+      width: 100%;
+            }  
+            label{
+                font-weight: bold;
+                font-size: 1.5em;
+                line-height: 2.0em;
+            }
+            input{
+                width: 100%;
+                border: 0;
+                outline: 0;
+                margin-bottom: .5em;
+                border:  1px solid rgba(0,0,0,0.1);
+                padding: .5em 1.2em .5em 1.2em ;
+                min-height: 40px;
+                font-size: 1.5em;
+            }
+        }
+    }
+    .c-form form p{
+
+        font-size: 1.2em;
+        padding: .5em .2em .5em .1em;
+        font-weight: bold;
+        color: $my_gray_color;
+    }
+
+    .c-form  form  .p-bold{
+
+      color: black;
+      
+    }
+
+    .upload-btn{
+        background-color: #ffffff;
+        padding: .5em 1em.5em 1em;
+        color: $my_gray_color !important;
+        border: .1em solid $my_gray_color;
+        border-radius: 5px;
+        font-size: 1.5em;
+    }
+
+    .upload-btn *{ 
+        color: $my_gray_color;
+    }
+
+    .btn-send{
+        font-size: 1.7em;
+        padding: .5em 3em .5em 3em;
+    }
